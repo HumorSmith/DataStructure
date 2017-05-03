@@ -6,7 +6,7 @@
 #include <math.h>
 #include "single_linklist.h"
 
-void init_slist(struct Node *pHead) {
+void init_slist(Node *pHead) {
     pHead = malloc(sizeof(Node));
     if (!pHead) /* 存儲分配失敗 */
         exit(OVERFLOW);
@@ -14,28 +14,28 @@ void init_slist(struct Node *pHead) {
 };
 
 
-void clear_slist(struct Node *pHead) {
-    struct Node *tempNode = pHead;
+void clear_slist(Node *pHead) {
+    Node *tempNode = pHead;
     while (tempNode) {
-        struct Node *freeNode = tempNode;
+        Node *freeNode = tempNode;
         tempNode = tempNode->next;
         free(freeNode);
     }
 }
 
-bool is_emppy_slist(struct Node *pHead) {
+bool is_emppy_slist(Node *pHead) {
     return pHead->next == NULL;
 }
 
 
 //add to list end
-bool insert_element_slist(struct Node *pHead, int pos, ELEMENT data) {
-    struct Node *tempNode = pHead;
-    if(pHead==NULL){
+bool insert_element_slist(Node *pHead, int pos, ELEMENT data) {
+    Node *tempNode = pHead;
+    if (pHead == NULL) {
         return false;
     }
     if (pos == 1) { //链表没有0位置.要找的是pos-1位置插入.所以pos-1特殊处理
-        struct Node *newNode = malloc(sizeof(struct Node));
+        Node *newNode = malloc(sizeof(Node));
         newNode->next = tempNode->next;
         newNode->data = data;
         tempNode->next = newNode;
@@ -43,14 +43,14 @@ bool insert_element_slist(struct Node *pHead, int pos, ELEMENT data) {
     }
     int count = 0;
 
-    while (tempNode->next!=NULL && count < pos - 1) {
+    while (tempNode->next != NULL && count < pos - 1) {
         tempNode = tempNode->next;
         count++;
     }
     if (!tempNode || count > pos - 1) {
         return false;
     }
-    struct Node *newNode = malloc(sizeof(struct Node));
+    Node *newNode = malloc(sizeof(Node));
     newNode->data = data;
     newNode->next = tempNode->next;
     tempNode->next = newNode;
@@ -58,30 +58,30 @@ bool insert_element_slist(struct Node *pHead, int pos, ELEMENT data) {
 };
 
 
-bool del_element_slist(struct Node *pHead, int pos, ELEMENT *pData) {
-    if(pHead==NULL){
+bool del_element_slist(Node *pHead, int pos, ELEMENT *pData) {
+    if (pHead == NULL) {
         printf("del_element_slist head is null");
         return false;
     }
     if (pos == 1) {
-            struct Node *freeNode = pHead->next;
+        Node *freeNode = pHead->next;
 
-            if(freeNode==NULL){
-                printf("del node  is null when pos = 1");
-                return false;
-            }
-            pHead->next = freeNode->next;
-            *pData = freeNode->data;
-            free(freeNode);
-            freeNode = NULL;
-            return true;
+        if (freeNode == NULL) {
+            printf("del node  is null when pos = 1");
+            return false;
+        }
+        pHead->next = freeNode->next;
+        *pData = freeNode->data;
+        free(freeNode);
+        freeNode = NULL;
+        return true;
 
     }
 
     //找pos-1个节点
     int count = 0;
-    struct Node *tempNode = pHead;
-    while (tempNode->next!=NULL && count < pos - 1) {
+    Node *tempNode = pHead;
+    while (tempNode->next != NULL && count < pos - 1) {
         tempNode = tempNode->next;
         count++;
     }
@@ -91,8 +91,8 @@ bool del_element_slist(struct Node *pHead, int pos, ELEMENT *pData) {
     }
 
     //转移指针
-    struct Node * freeNode = tempNode->next;
-    if(freeNode==NULL){
+    Node *freeNode = tempNode->next;
+    if (freeNode == NULL) {
         return false;
     }
     tempNode->next = tempNode->next->next;
@@ -103,9 +103,9 @@ bool del_element_slist(struct Node *pHead, int pos, ELEMENT *pData) {
 }
 
 
-bool get_element_slist(struct Node *pHead, int pos, ELEMENT *pData) {
+bool get_element_slist(Node *pHead, int pos, ELEMENT *pData) {
     int count = 0;
-    struct Node *tempNode = pHead;
+    Node *tempNode = pHead;
     while (tempNode->next && count < pos - 1) {
         tempNode = tempNode->next;
         count++;
@@ -115,15 +115,74 @@ bool get_element_slist(struct Node *pHead, int pos, ELEMENT *pData) {
 }
 
 
-void destroy_slist(struct Node *pHead) {
+void destroy_slist(Node *pHead) {
     clear_slist(pHead);
     free(pHead);
 };
 
-void print_slist(struct Node *pHead) {
-    struct Node *tempNode = pHead;
+void print_slist(Node *pHead) {
+    Node *tempNode = pHead;
     while (tempNode->next) {
         tempNode = tempNode->next;
         printf("%d\t", tempNode->data);
     }
+};
+
+
+//反转链表   HEAD->A->B->C     C->B->A->HEAD此时 C变成HEAD.
+// HEAD数据不计入链表.原来的HEAD没有数据.此时变成了数据位.
+Node *reverse_slist(Node *pHead) {
+    if (!pHead) {
+        return NULL;
+    }
+    Node *pNow = pHead;  //逻辑的当前节点
+    Node *pPre = NULL;  //逻辑的上一个节点
+    Node *pNext = NULL;//逻辑的下一个节点
+    Node *pTail = NULL;//用来保存最后一个反转的尾指针
+    while (pNow != NULL) {
+        pNext = pNow->next; //得到下一个节点
+        if (pNext == NULL) { //如果为空.证明pNow是tail
+            pTail = pNow;
+        }
+        pNow->next = pPre; //当前节点指向前一个节点.真正反转的操作.只有这一步.其余的都是循环的赋值
+        pPre = pNow; //把pNow赋值给pPre.当成普通赋值即可.为了下一次pNow->next = pPre;做准备
+        pNow = pNext;//当成普通变量赋值.pNext = pNow->next; //循环遍历链表
+    }
+    pHead->next = NULL;
+
+    return pTail;
+
+};
+
+//优化反转链表   HEAD->A->B->C     C->B->A->HEAD此时.
+// new一个Head   变成  newHead->C->B->A->HEAD
+// 移除 newHead->C->B->A没有数据丢失
+Node *reverse_slist_plus(Node *pHead) {
+    if (!pHead) {
+        return NULL;
+    }
+
+    Node *pHeadNext = pHead->next; //记录下头节点的下一个位置.因为后面要移除头节点使用
+
+
+    Node *pNow = pHead;  //逻辑的当前节点
+    Node *pPre = NULL;  //逻辑的上一个节点
+    Node *pNext = NULL;//逻辑的下一个节点
+    Node *pTail = NULL;//用来保存最后一个反转的尾指针
+    while (pNow != NULL) {
+        pNext = pNow->next; //得到下一个节点.循环递进
+        if (pNext == NULL) { //如果为空.证明pNow是tail
+            pTail = pNow;
+        }
+        pNow->next = pPre; //当前节点指向前一个节点.真正反转的操作.只有这一步.其余的都是循环的赋值
+        pPre = pNow; //简单的变量赋值
+        pNow = pNext;//简单的变量赋值
+    }
+
+
+    pHeadNext->next = NULL; //移除头结点.头节点在stack里.无法使用free
+    PNode pNewHead = malloc(sizeof(Node));
+    pNewHead->next = pTail;
+    return pNewHead;
+
 };

@@ -9,10 +9,10 @@
 #define ELEMENT int
 
 
-struct Node {
+typedef struct Node {
     struct Node *next;
     ELEMENT data;
-} Node;
+} Node,*PNode;
 
 
 #endif //DATA_STRUCTURE_COMMON_H

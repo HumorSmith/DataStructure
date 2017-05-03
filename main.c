@@ -24,14 +24,19 @@ void testSingleList() {
     struct Node head;
     init_slist(&head);
     insert_element_slist(&head, 1, 12);
-    insert_element_slist(&head, 2, 10);
-    insert_element_slist(&head, 1, 11);
-    insert_element_slist(&head, 4, 11);
+    insert_element_slist(&head, 2, 13);
+    insert_element_slist(&head, 3, 14);
+    insert_element_slist(&head, 4, 15);
     int deleteResult;
-    del_element_slist(&head, 1, &deleteResult);
-    del_element_slist(&head, 3, &deleteResult);
-    printf("delete result is %d\n", deleteResult);
+    //  del_element_slist(&head, 1, &deleteResult);
+    del_element_slist(&head, 4, &deleteResult);
+    //printf("delete result is %d\n", deleteResult);
+    head.data = 100;
     print_slist(&head);
+    printf("\n");
+    Node *pNewHead = reverse_slist_plus(&head);
+    print_slist(pNewHead);
+
 
 }
 
