@@ -10,7 +10,7 @@
 #include "../common.h"
 
 
-void init_slist( Node *pHead);
+void init_slist(PNode *pHead);
 
 
 bool is_emppy_slist( Node *pHead);

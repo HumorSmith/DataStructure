@@ -21,20 +21,20 @@
 //}
 
 void testSingleList() {
-    struct Node head;
-    init_slist(&head);
-    insert_element_slist(&head, 1, 12);
-    insert_element_slist(&head, 2, 13);
-    insert_element_slist(&head, 3, 14);
-    insert_element_slist(&head, 4, 15);
+    PNode pHead;
+    init_slist(&pHead);
+    insert_element_slist(pHead, 1, 12);
+    insert_element_slist(pHead, 2, 13);
+    insert_element_slist(pHead, 3, 14);
+    insert_element_slist(pHead, 4, 15);
     int deleteResult;
     //  del_element_slist(&head, 1, &deleteResult);
-    del_element_slist(&head, 4, &deleteResult);
+    del_element_slist(pHead, 4, &deleteResult);
     //printf("delete result is %d\n", deleteResult);
-    head.data = 100;
-    print_slist(&head);
+
+    print_slist(pHead);
     printf("\n");
-    Node *pNewHead = reverse_slist_plus(&head);
+    Node *pNewHead = reverse_slist_plus(pHead);
     print_slist(pNewHead);
 
 

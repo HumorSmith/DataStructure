@@ -6,11 +6,11 @@
 #include <math.h>
 #include "single_linklist.h"
 
-void init_slist(Node *pHead) {
-    pHead = malloc(sizeof(Node));
-    if (!pHead) /* 存儲分配失敗 */
+void init_slist(PNode *pHead) {
+    *pHead = malloc(sizeof(Node));
+    if (*pHead == NULL) /* 存儲分配失敗 */
         exit(OVERFLOW);
-    pHead->next = NULL;
+    (*pHead)->next = NULL;
 };
 
 
@@ -162,8 +162,7 @@ Node *reverse_slist_plus(Node *pHead) {
         return NULL;
     }
 
-    Node *pHeadNext = pHead->next; //记录下头节点的下一个位置.因为后面要移除头节点使用
-
+    PNode pHeadNext = pHead->next;
 
     Node *pNow = pHead;  //逻辑的当前节点
     Node *pPre = NULL;  //逻辑的上一个节点
@@ -179,8 +178,14 @@ Node *reverse_slist_plus(Node *pHead) {
         pNow = pNext;//简单的变量赋值
     }
 
+    //把头节点从链表中断开
+    pHeadNext->next = NULL;
 
-    pHeadNext->next = NULL; //移除头结点.头节点在stack里.无法使用free
+    //free头节点
+    free(pHead);
+    pHead = NULL;
+
+    //malloc新的头节点
     PNode pNewHead = malloc(sizeof(Node));
     pNewHead->next = pTail;
     return pNewHead;
