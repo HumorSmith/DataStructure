@@ -3,5 +3,5 @@ project(data_structure)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.c link_list/array.h link_list/array.c common.h common.c link_list/single_linklist.h link_list/single_linklist.c)
+set(SOURCE_FILES main.c link_list/array.h link_list/array.c common.h common.c link_list/single_linklist.h link_list/single_linklist.c link_list/double_linklist.h link_list/double_linklist.c)
 add_executable(data_structure ${SOURCE_FILES})
