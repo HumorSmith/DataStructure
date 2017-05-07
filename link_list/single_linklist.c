@@ -41,13 +41,8 @@ bool insert_element_slist(Node *pHead, int pos, ELEMENT data) {
         tempNode->next = newNode;
         return true;
     }
-    int count = 0;
-
-    while (tempNode->next != NULL && count < pos - 1) {
-        tempNode = tempNode->next;
-        count++;
-    }
-    if (!tempNode || count > pos - 1) {
+    tempNode = get_element_slist(tempNode, pos - 1);
+    if (tempNode == NULL) {
         return false;
     }
     Node *newNode = malloc(sizeof(Node));
@@ -77,19 +72,12 @@ bool del_element_slist(Node *pHead, int pos, ELEMENT *pData) {
         return true;
 
     }
-
+    PNode tempNode = pHead;
     //找pos-1个节点
-    int count = 0;
-    Node *tempNode = pHead;
-    while (tempNode->next != NULL && count < pos - 1) {
-        tempNode = tempNode->next;
-        count++;
-    }
-    if (!tempNode || count > pos - 1) {
-        printf("del node  is null or pos invalied");
+    tempNode = get_element_slist(tempNode, pos - 1);
+    if (tempNode == NULL) {
         return false;
     }
-
     //转移指针
     Node *freeNode = tempNode->next;
     if (freeNode == NULL) {
@@ -103,15 +91,16 @@ bool del_element_slist(Node *pHead, int pos, ELEMENT *pData) {
 }
 
 
-bool get_element_slist(Node *pHead, int pos, ELEMENT *pData) {
-    int count = 0;
-    Node *tempNode = pHead;
-    while (tempNode->next && count < pos - 1) {
-        tempNode = tempNode->next;
-        count++;
-    }
-    *pData = tempNode->data;
-    return true;
+PNode get_element_slist(PNode pHead, int pos) {
+/* 在双向链表L中返回第i个元素的地址。i为0，返回头结点的地址。若第i个元素不存在，*/
+    /* 返回NULL */
+    int j;
+    PNode p = pHead; /* p指向头结点 */
+    if (pos < 0 || pos > get_length_slist(pHead)) /* i值不合法 */
+        return NULL;
+    for (j = 1; j <= pos; j++)
+        p = p->next;
+    return p;
 }
 
 
@@ -190,4 +179,14 @@ Node *reverse_slist_plus(Node *pHead) {
     pNewHead->next = pTail;
     return pNewHead;
 
+};
+
+int get_length_slist(PNode pHead) {
+    PNode tempHead = pHead;
+    int count = 0;
+    while (tempHead != NULL) {
+        tempHead = tempHead->next;
+        count++;
+    }
+    return count;
 };
