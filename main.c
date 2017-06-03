@@ -4,6 +4,7 @@
 #include "link_list/double_linklist.h"
 #include "queue/queue_array.h"
 #include "stack/stack_array.h"
+#include "stack/stack_list.h"
 //void testArray() {
 //    struct Array array;
 //    init_arr(&array);
@@ -60,18 +61,30 @@
 //}
 
 
-void testStackArray() {
-    PSTACK_ARRAY stack_array = NULL;
-    init_stack_array(&stack_array);
-    int a = 1;
-    push_stack_array(stack_array, &a);
-    a = 2;
-    push_stack_array(stack_array, &a);
+//void testStackArray() {
+//    PSTACK_ARRAY stack_array = NULL;
+//    init_stack_array(&stack_array);
+//    int a = 1;
+//    push_stack_array(stack_array, &a);
+//    a = 2;
+//    push_stack_array(stack_array, &a);
+//
+//    print_stack_array(stack_array);
+//
+//    destroy_stack_array(&stack_array);
+//}
 
-    print_stack_array(stack_array);
-
-    destroy_stack_array(&stack_array);
+void testStackList() {
+    PSTACK_LIST pstack_list = NULL;
+    init_stack_list(&pstack_list);
+    int a=1;
+    push_stack_list(pstack_list,&a);
+    a=2;
+    push_stack_list(pstack_list,&a);
+    print_stack_list(pstack_list);
+    destroy_stack_list(&pstack_list);
 }
+
 
 //void test_queue_array() {
 //    PQueueArr queueArr;
@@ -86,6 +99,6 @@ void testStackArray() {
 //}
 
 int main() {
-    testStackArray();
+    testStackList();
     return 0;
 }

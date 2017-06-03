@@ -9,7 +9,7 @@ void init_stack_array(PSTACK_ARRAY *pstack_array) {
         exit(OVERFLOW);
     }
     (*pstack_array)->stack = malloc(sizeof(ELEMENT) * MAX_STACK_ARRAY_SIZE);
-    (*pstack_array)->top = 1;
+    (*pstack_array)->top = -1;
     (*pstack_array)->size = MAX_STACK_ARRAY_SIZE;
 };
 
@@ -33,7 +33,7 @@ void pop_stack_array(PSTACK_ARRAY pstack_array, ELEMENT *data) {
 };
 
 bool is_empty_stack_array(PSTACK_ARRAY pstack_array) {
-    if (pstack_array->top == 1) {
+    if (pstack_array->top == -1) {
         return true;
     }
     return false;
