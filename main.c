@@ -3,6 +3,7 @@
 #include "link_list/single_linklist.h"
 #include "link_list/double_linklist.h"
 #include "queue/queue_array.h"
+#include "stack/stack_array.h"
 //void testArray() {
 //    struct Array array;
 //    init_arr(&array);
@@ -58,19 +59,33 @@
 //
 //}
 
-void test_queue_array() {
-    PQueueArr queueArr;
-    init_queue_array(&queueArr);
-    enqueue_array(queueArr, 1);
-    enqueue_array(queueArr, 2);
-    print_queue_array(queueArr);
-    int data;
-    dequeue_array(queueArr, &data);
-    printf("\n delete data is %d", data);
 
+void testStackArray() {
+    PSTACK_ARRAY stack_array = NULL;
+    init_stack_array(&stack_array);
+    int a = 1;
+    push_stack_array(stack_array, &a);
+    a = 2;
+    push_stack_array(stack_array, &a);
+
+    print_stack_array(stack_array);
+
+    destroy_stack_array(&stack_array);
 }
 
+//void test_queue_array() {
+//    PQueueArr queueArr;
+//    init_queue_array(&queueArr);
+//    enqueue_array(queueArr, 1);
+//    enqueue_array(queueArr, 2);
+//    print_queue_array(queueArr);
+//    int data;
+//    dequeue_array(queueArr, &data);
+//    printf("\n delete data is %d", data);
+//
+//}
+
 int main() {
-    test_queue_array();
+    testStackArray();
     return 0;
 }
