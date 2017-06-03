@@ -43,7 +43,7 @@ void clear_stack_list(PSTACK_LIST pstack_list) {
 void destroy_stack_list(PSTACK_LIST *pstack_list) {
     clear_stack_list(*pstack_list);
     free(*pstack_list);
-    printf("stack list has been destroyed");
+    printf("stack list has been destroyed\n");
 }
 
 

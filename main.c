@@ -5,6 +5,7 @@
 #include "queue/queue_array.h"
 #include "stack/stack_array.h"
 #include "stack/stack_list.h"
+#include "queue/queue_list.h"
 //void testArray() {
 //    struct Array array;
 //    init_arr(&array);
@@ -74,16 +75,16 @@
 //    destroy_stack_array(&stack_array);
 //}
 
-void testStackList() {
-    PSTACK_LIST pstack_list = NULL;
-    init_stack_list(&pstack_list);
-    int a=1;
-    push_stack_list(pstack_list,&a);
-    a=2;
-    push_stack_list(pstack_list,&a);
-    print_stack_list(pstack_list);
-    destroy_stack_list(&pstack_list);
-}
+//void testStackList() {
+//    PSTACK_LIST pstack_list = NULL;
+//    init_stack_list(&pstack_list);
+//    int a=1;
+//    push_stack_list(pstack_list,&a);
+//    a=2;
+//    push_stack_list(pstack_list,&a);
+//    print_stack_list(pstack_list);
+//    destroy_stack_list(&pstack_list);
+//}
 
 
 //void test_queue_array() {
@@ -98,7 +99,22 @@ void testStackList() {
 //
 //}
 
+void test_queue_list() {
+    PQUEUE_LIST pqueue_list = NULL;
+    init_queue_list(&pqueue_list);
+    int a = 2;
+    en_quque_list(pqueue_list, &a);
+    a = 3;
+    en_quque_list(pqueue_list, &a);
+    a = 4;
+    en_quque_list(pqueue_list, &a);
+
+    print_queue_list(pqueue_list);
+
+    destroy_queue_list(&pqueue_list);
+}
+
 int main() {
-    testStackList();
+    test_queue_list();
     return 0;
 }
