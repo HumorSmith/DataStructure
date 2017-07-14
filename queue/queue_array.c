@@ -44,7 +44,7 @@ bool dequeue_array(PQueueArr pQueueArr, ELEMENT *data) {
     if (isempty_queue_array(pQueueArr)) {
         return false;
     }
-    *data = pQueueArr->base[pQueueArr->front + 1];
+    *data = pQueueArr->base[pQueueArr->front];
     pQueueArr->front = (pQueueArr->front + 1) % MAX_QUEUE_SIZE;
     return true;
 
