@@ -24,27 +24,20 @@ void clear_queue_array(PQueueArr pQueueArr) {
 }
 
 bool isempty_queue_array(PQueueArr pQueueArr) {
-    if (pQueueArr->front == pQueueArr->rear) /* 队列空的标志 */
-        return true;
-    else
-        return false;
+    return (pQueueArr->front == pQueueArr->rear); /* 队列空的标志 */
 };
 
 //在这里.我们最后一个元素为空.
 bool isfull_queue_array(PQueueArr pQueueArr) {
-    if ((pQueueArr->rear + 1) % MAX_QUEUE_SIZE == (pQueueArr->front)) {
-        return true;
-    } else {
-        return false;
-    }
+    return((pQueueArr->rear + 1) % MAX_QUEUE_SIZE == (pQueueArr->front));
 };
 
 bool enqueue_array(PQueueArr pQueueArr, ELEMENT data) {
     if (isfull_queue_array(pQueueArr)) {
         return false;
     }
-    pQueueArr->rear = (pQueueArr->rear + 1) % MAX_QUEUE_SIZE;
     pQueueArr->base[pQueueArr->rear] = data;
+    pQueueArr->rear = (pQueueArr->rear + 1) % MAX_QUEUE_SIZE;
 };
 
 bool dequeue_array(PQueueArr pQueueArr, ELEMENT *data) {
