@@ -32,11 +32,11 @@ bool isfull_queue_array(PQueueArr pQueueArr) {
     return((pQueueArr->rear + 1) % MAX_QUEUE_SIZE == (pQueueArr->front));
 };
 
-bool enqueue_array(PQueueArr pQueueArr, ELEMENT data) {
+bool enqueue_array(PQueueArr pQueueArr, ELEMENT *data) {
     if (isfull_queue_array(pQueueArr)) {
         return false;
     }
-    pQueueArr->base[pQueueArr->rear] = data;
+    pQueueArr->base[pQueueArr->rear] = *data;
     pQueueArr->rear = (pQueueArr->rear + 1) % MAX_QUEUE_SIZE;
 };
 

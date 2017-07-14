@@ -24,7 +24,7 @@ bool isempty_queue_array(PQueueArr pQueueArr);
 
 bool isfull_queue_array(PQueueArr pQueueArr);
 
-bool enqueue_array(PQueueArr pQueueArr, ELEMENT data);
+bool enqueue_array(PQueueArr pQueueArr, ELEMENT *data);
 
 bool dequeue_array(PQueueArr pQueueArr, ELEMENT *data);
 
