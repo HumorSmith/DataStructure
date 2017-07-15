@@ -7,7 +7,7 @@
 
 #include "../common.h"
 
-#define MAX_QUEUE_SIZE  10
+#define MAX_QUEUE_SIZE  6
 typedef struct QueueArr {
     ELEMENT *base;
     int front;
@@ -24,7 +24,8 @@ bool isempty_queue_array(PQueueArr pQueueArr);
 
 bool isfull_queue_array(PQueueArr pQueueArr);
 
-bool enqueue_array(PQueueArr pQueueArr, ELEMENT *data);
+
+bool enqueue_array(PQueueArr pQueueArr, ELEMENT* data);
 
 bool dequeue_array(PQueueArr pQueueArr, ELEMENT *data);
 

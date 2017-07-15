@@ -9,7 +9,7 @@ void init_queue_array(PQueueArr *pQueueArr) {
     if (*pQueueArr == NULL) {
         exit(OVERFLOW);
     }
-    (*pQueueArr)->base = malloc(sizeof(MAX_QUEUE_SIZE * sizeof(QueueArr)));
+    (*pQueueArr)->base = malloc(MAX_QUEUE_SIZE * sizeof(ELEMENT));
     (*pQueueArr)->front = (*pQueueArr)->rear = 0;
 };
 
@@ -32,22 +32,24 @@ bool isfull_queue_array(PQueueArr pQueueArr) {
     return((pQueueArr->rear + 1) % MAX_QUEUE_SIZE == (pQueueArr->front));
 };
 
-bool enqueue_array(PQueueArr pQueueArr, ELEMENT *data) {
+
+bool enqueue_array(PQueueArr pQueueArr, ELEMENT* data)  {
     if (isfull_queue_array(pQueueArr)) {
         return false;
     }
-    pQueueArr->base[pQueueArr->rear] = *data;
     pQueueArr->rear = (pQueueArr->rear + 1) % MAX_QUEUE_SIZE;
+    pQueueArr->base[pQueueArr->rear] = *data;
+    return true;
+
 };
 
 bool dequeue_array(PQueueArr pQueueArr, ELEMENT *data) {
     if (isempty_queue_array(pQueueArr)) {
         return false;
     }
-    *data = pQueueArr->base[pQueueArr->front + 1];
+    *data = pQueueArr->base[(pQueueArr->front+1)%MAX_QUEUE_SIZE];
     pQueueArr->front = (pQueueArr->front + 1) % MAX_QUEUE_SIZE;
     return true;
-
 }
 
 
@@ -61,4 +63,5 @@ void print_queue_array(PQueueArr pQueueArr) {
         i++;
         i = i % MAX_QUEUE_SIZE;
     }
+    printf("\n");
 };

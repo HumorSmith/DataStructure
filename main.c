@@ -87,34 +87,68 @@
 //}
 
 
-//void test_queue_array() {
-//    PQueueArr queueArr;
-//    init_queue_array(&queueArr);
-//    enqueue_array(queueArr, 1);
-//    enqueue_array(queueArr, 2);
-//    print_queue_array(queueArr);
-//    int data;
-//    dequeue_array(queueArr, &data);
-//    printf("\n delete data is %d", data);
-//
-//}
+void test_queue_array() {
+    PQueueArr queueArr;
+    init_queue_array(&queueArr);
+    int data = 0;
+    enqueue_array(queueArr, &data);
 
-void test_queue_list() {
-    PQUEUE_LIST pqueue_list = NULL;
-    init_queue_list(&pqueue_list);
-    int a = 2;
-    en_quque_list(pqueue_list, &a);
-    a = 3;
-    en_quque_list(pqueue_list, &a);
-    a = 4;
-    en_quque_list(pqueue_list, &a);
+    int data1 = 1;
+    enqueue_array(queueArr, &data1);
 
-    print_queue_list(pqueue_list);
 
-    destroy_queue_list(&pqueue_list);
+    int data2 = 2;
+    enqueue_array(queueArr, &data2);
+
+
+
+    int data3 = 3;
+    enqueue_array(queueArr, &data3);
+
+
+    int data4 = 4;
+    enqueue_array(queueArr, &data4);
+
+
+    int data5 = 5;
+    enqueue_array(queueArr, &data5);
+
+
+    int data6 = 6;
+    enqueue_array(queueArr, &data6);
+
+
+
+
+    print_queue_array(queueArr);
+    int deData = 10;
+    for (int i = 0; i < 10; ++i) {
+        dequeue_array(queueArr, &deData);
+        printf("\n delete data is %d\n", deData);
+    }
+
+ //   print_queue_array(queueArr);
+
+
+
 }
 
+//void test_queue_list() {
+//    PQUEUE_LIST pqueue_list = NULL;
+//    init_queue_list(&pqueue_list);
+//    int a = 2;
+//    en_quque_list(pqueue_list, &a);
+//    a = 3;
+//    en_quque_list(pqueue_list, &a);
+//    a = 4;
+//    en_quque_list(pqueue_list, &a);
+//
+//    print_queue_list(pqueue_list);
+//
+//    destroy_queue_list(&pqueue_list);
+//}
+
 int main() {
-    test_queue_list();
+    test_queue_array();
     return 0;
 }
