@@ -1,8 +1,16 @@
+<<<<<<< 248481368ef82c94d9acdcf4c7a9aee578bcc48d
 # Install script for directory: /Users/eavawu/Documents/data_structure
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/usr/local")
+=======
+# Install script for directory: E:/study_workspace/DataStructure
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/data_structure")
+>>>>>>> cmake update
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,5 +43,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< 248481368ef82c94d9acdcf4c7a9aee578bcc48d
 file(WRITE "/Users/eavawu/Documents/data_structure/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "E:/study_workspace/DataStructure/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> cmake update
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
