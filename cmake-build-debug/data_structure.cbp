@@ -8,77 +8,22 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-<<<<<<< 248481368ef82c94d9acdcf4c7a9aee578bcc48d
-				<Option working_dir="/Users/eavawu/Documents/data_structure/cmake-build-debug"/>
+				<Option working_dir="E:/alorthim_workspace/DataStructure/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/eavawu/Documents/data_structure/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/eavawu/Documents/data_structure/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="data_structure">
-				<Option output="/Users/eavawu/Documents/data_structure/cmake-build-debug/data_structure" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/eavawu/Documents/data_structure/cmake-build-debug"/>
-=======
-				<Option working_dir="E:/study_workspace/DataStructure/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="data_structure">
-				<Option output="E:/study_workspace/DataStructure/cmake-build-debug/data_structure.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/study_workspace/DataStructure/cmake-build-debug"/>
->>>>>>> cmake update
+				<Option output="E:/alorthim_workspace/DataStructure/cmake-build-debug/data_structure.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/alorthim_workspace/DataStructure/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-<<<<<<< 248481368ef82c94d9acdcf4c7a9aee578bcc48d
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="data_structure/fast">
-				<Option output="/Users/eavawu/Documents/data_structure/cmake-build-debug/data_structure" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/eavawu/Documents/data_structure/cmake-build-debug"/>
-=======
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
@@ -88,90 +33,19 @@
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure"/>
-					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure"/>
+					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="data_structure/fast">
-				<Option output="E:/study_workspace/DataStructure/cmake-build-debug/data_structure.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/study_workspace/DataStructure/cmake-build-debug"/>
->>>>>>> cmake update
+				<Option output="E:/alorthim_workspace/DataStructure/cmake-build-debug/data_structure.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/alorthim_workspace/DataStructure/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-<<<<<<< 248481368ef82c94d9acdcf4c7a9aee578bcc48d
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../lib/clang/8.1.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/eavawu/Documents/data_structure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-		</Build>
-		<Unit filename="/Users/eavawu/Documents/data_structure/common.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/common.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/array.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/array.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/double_linklist.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/double_linklist.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/single_linklist.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/link_list/single_linklist.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/main.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/queue/queue_array.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/queue/queue_array.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/queue/queue_list.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/queue/queue_list.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/stack/stack_array.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/stack/stack_array.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/stack/stack_list.c">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/stack/stack_list.h">
-			<Option target="data_structure"/>
-		</Unit>
-		<Unit filename="/Users/eavawu/Documents/data_structure/CMakeLists.txt">
-=======
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
@@ -181,86 +55,97 @@
 					<Add directory="e:\soft\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure/fast"/>
-					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 data_structure/fast"/>
+					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/study_workspace/DataStructure/cmake-build-debug"/>
+				<Option working_dir="E:/alorthim_workspace/DataStructure/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/study_workspace/DataStructure/cmake-build-debug"/>
+				<Option working_dir="E:/alorthim_workspace/DataStructure/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/study_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/Soft/mingw/bin/mingw32-make.exe -f &quot;E:/alorthim_workspace/DataStructure/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/study_workspace/DataStructure/common.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/common.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/common.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/common.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/array.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/array.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/array.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/array.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/double_linklist.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/double_linklist.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/double_linklist.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/double_linklist.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/single_linklist.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/single_linklist.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/link_list/single_linklist.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/link_list/single_linklist.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/main.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/main.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/queue/queue_array.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/map/hashmap.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/queue/queue_array.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/map/hashmap.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/queue/queue_list.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/queue/queue_array.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/queue/queue_list.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/queue/queue_array.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/stack/stack_array.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/queue/queue_list.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/stack/stack_array.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/queue/queue_list.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/stack/stack_list.c">
+		<Unit filename="E:/alorthim_workspace/DataStructure/stack/stack_array.c">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/stack/stack_list.h">
+		<Unit filename="E:/alorthim_workspace/DataStructure/stack/stack_array.h">
 			<Option target="data_structure"/>
 		</Unit>
-		<Unit filename="E:/study_workspace/DataStructure/CMakeLists.txt">
->>>>>>> cmake update
+		<Unit filename="E:/alorthim_workspace/DataStructure/stack/stack_list.c">
+			<Option target="data_structure"/>
+		</Unit>
+		<Unit filename="E:/alorthim_workspace/DataStructure/stack/stack_list.h">
+			<Option target="data_structure"/>
+		</Unit>
+		<Unit filename="E:/alorthim_workspace/DataStructure/tree/binary_tree.c">
+			<Option target="data_structure"/>
+		</Unit>
+		<Unit filename="E:/alorthim_workspace/DataStructure/tree/binary_tree.h">
+			<Option target="data_structure"/>
+		</Unit>
+		<Unit filename="E:/alorthim_workspace/DataStructure/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

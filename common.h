@@ -11,6 +11,8 @@
 #include <math.h>
 
 #define ELEMENT int
+#define HASH_KEY int
+#define HASH_VALUE int
 
 
 typedef struct Node {
@@ -23,4 +25,24 @@ typedef struct DNode {
     struct DNode *pre;
     ELEMENT data;
 } DNode, *PDNode;
+
+
+typedef struct TreeNode{
+    struct TreeNode *left;
+    struct TreeNode *right;
+    struct TreeNode *parent;
+    ELEMENT data;
+}TreeNode,*PTreeNode;
+
+typedef struct HashNode{
+    ELEMENT *data;
+    HASH_KEY key;
+    struct HashNode* next;
+}HashNode;
+
+typedef struct HashMap
+{
+    HashNode* value[15];
+}HashMap;
+
 #endif //DATA_STRUCTURE_COMMON_H

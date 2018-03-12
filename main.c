@@ -6,6 +6,7 @@
 #include "stack/stack_array.h"
 #include "stack/stack_list.h"
 #include "queue/queue_list.h"
+#include "map/hashmap.h"
 //void testArray() {
 //    struct Array array;
 //    init_arr(&array);
@@ -86,6 +87,21 @@
 //    destroy_stack_list(&pstack_list);
 //}
 
+void testHashMap(){
+     HashMap * map = create_hash_table();
+    HashNode * node = malloc(sizeof(HashNode));
+    node->key = 1;
+
+    int *a = malloc(sizeof(int));
+    *a = 10;
+    hash_put(map,1,a);
+
+
+    printf("==========================");
+    HashNode * hashNode = map->value[1];
+    printf("data = %d",*hashNode->data);
+
+}
 
 void test_queue_array() {
     PQueueArr queueArr;
@@ -149,6 +165,6 @@ void test_queue_array() {
 //}
 
 int main() {
-    test_queue_array();
+    testHashMap();
     return 0;
 }
