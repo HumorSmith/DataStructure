@@ -12,7 +12,7 @@ HashMap *create_hash_table();
 
 HashNode *hash_get(HashMap *pTable, HASH_KEY key);
 
-void hash_put(HashMap *pTable, HASH_KEY key, HASH_VALUE *value);
+void hash_put(HashMap *pTable, HASH_KEY key, HASH_VALUE value);
 
 HashNode *hash_remove(HashMap *pTable, HASH_KEY key);
 

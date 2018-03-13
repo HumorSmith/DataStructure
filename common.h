@@ -13,7 +13,7 @@
 #define ELEMENT int
 #define HASH_KEY int
 #define HASH_VALUE int
-
+#define HASH_DEFAULT  -1
 
 typedef struct Node {
     struct Node *next;
@@ -35,7 +35,7 @@ typedef struct TreeNode{
 }TreeNode,*PTreeNode;
 
 typedef struct HashNode{
-    ELEMENT *data;
+    ELEMENT value;
     HASH_KEY key;
     struct HashNode* next;
 }HashNode;
@@ -44,5 +44,7 @@ typedef struct HashMap
 {
     HashNode* value[15];
 }HashMap;
+
+
 
 #endif //DATA_STRUCTURE_COMMON_H

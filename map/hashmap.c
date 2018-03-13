@@ -23,24 +23,20 @@ HashNode *hash_get(HashMap *pTable, HASH_KEY key) {
     if (NULL == (hashNode = pTable->value[hash(key)])) {
         return NULL;
     };
-    while (hashNode) {
-        if (hashNode->key == key) {
-            return hashNode;
-        }
-        hashNode = hashNode->next;
-    }
+    return pTable->value[hash(key)];
 
 };
 
-void hash_put(HashMap *pTable, HASH_KEY key, HASH_VALUE *value) {
+void hash_put(HashMap *pTable, HASH_KEY key, HASH_VALUE value) {
     HashNode *hashNode = malloc(sizeof(HashNode));
-    hashNode->data = value;
+    hashNode->value = value;
     hashNode->key = key;
     pTable->value[hash(key)] = hashNode;
 };
 
 HashNode *hash_remove(HashMap *pTable, HASH_KEY key) {
-      return  pTable->value[hash(key)];
+    HashNode *hashNode = pTable->value[hash(key)];
+    hashNode->value = HASH_DEFAULT;
 };
 
 
